@@ -6,6 +6,12 @@
     <!--  All snippets are MIT license http://bootdey.com/license -->
     <title>Bootstrap Login Form in modal - Bootdey.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        const token = window.localStorage.getItem('token')
+        if(token) {
+            window.location = '/'
+        }
+    </script>
 	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -18,23 +24,23 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="text-center">Sign Up</h1>
-                <span id="errorMessage">Wrong username or password!</span>
+                <!-- <span id="errorMessage">Wrong username or password!</span> -->
             </div>
             <div class="modal-body">
-                <form class="form col-md-12 center-block">
+                <form id="formbtn" class="form col-md-12 center-block">
                     <div class="form-group">
-                        <input id="inputFile" type="file" placeholder="Email">
+                        <input id="inputFile" type="file" placeholder="Email" accept="image/*">
                         <label class="form-control input-lg" for="inputFile">Choose an image</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control input-lg" placeholder="Username">
+                        <input id="usernameInput" type="text" class="form-control input-lg" placeholder="Username">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control input-lg" placeholder="Password">
+                        <input id="passwordInput" type="password" class="form-control input-lg" placeholder="Password">
                     </div>
                     <div class="form-group">
-                        <button class="btn btn-primary btn-lg btn-block">Sign Up</button>
-                        <span class="pull-right"><a href="./login.html">Sign in</a></span>
+                        <button id="signbtn" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+                        <span class="pull-right"><a href="/login">Sign in</a></span>
                     </div>
                 </form>
             </div>
@@ -43,8 +49,9 @@
     </div>
 </div>
 
-
-<script type="text/javascript">
+<script src="js/model.js"></script>
+<script src="js/register.js"></script>
+<!-- <script type="text/javascript"> -->
 
 </script>
 </body>
