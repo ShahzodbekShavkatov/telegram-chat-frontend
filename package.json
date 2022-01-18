@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "name": "telegram-chat-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
