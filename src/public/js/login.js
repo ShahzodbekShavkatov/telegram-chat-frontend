@@ -1,5 +1,6 @@
-const token = window.localStorage.getItem('token')
-if(token) {
+const tokenn = window.localStorage.getItem('token')
+const id = window.localStorage.getItem('id')
+if(tokenn && id) {
     window.location = '/'
 }
 
@@ -16,6 +17,7 @@ formm.onsubmit = async event => {
 
     if(response.token) {
         window.localStorage.setItem('token', response.token)
+        window.localStorage.setItem('id', response.id)
         window.location = '/'
     }
 

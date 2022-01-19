@@ -9,7 +9,7 @@ async function request (path, method, body) {
         headers['Content-type'] = 'application/json'
     }
 
-	const response = await fetch(backendApi + path, {
+	let response = await fetch(backendApi + path, {
 		method,
 		headers,
 		body: (body instanceof FormData) ? body : JSON.stringify(body)
