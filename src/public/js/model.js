@@ -1,4 +1,4 @@
-const backendApi = 'https://whimsical-cheesecake-ef51d9.netlify.app'
+const backendApi = 'https://telegrambackend.herokuapp.com/'
 
 async function request (path, method, body) {
     let headers = {
