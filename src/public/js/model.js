@@ -1,4 +1,4 @@
-const backendApi = 'https://telegrambackend.herokuapp.com/'
+const backendApi = 'https://telegrambackend.herokuapp.com'
 
 async function request (path, method, body) {
     let headers = {
