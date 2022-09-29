@@ -1,4 +1,4 @@
-const backendApi = 'http://localhost:5656'
+const backendApi = 'https://whimsical-cheesecake-ef51d9.netlify.app'
 
 async function request (path, method, body) {
     let headers = {
